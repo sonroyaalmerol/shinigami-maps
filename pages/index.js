@@ -1,7 +1,7 @@
 import Head from "next/head";
 import Image from "next/image";
 import { useState } from "react";
-import MapArea from "../components/MapArea";
+import Mapper from "../components/Mapper";
 import styles from "../styles/Home.module.css";
 
 
@@ -19,37 +19,9 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className="flex flex-col justify-center items-center w-screen, h-screen bg-gray-100">
-        <h1 className="m-4 justify-center" >GMap's and GAutocomplete app built using NextJS and <a className="font-bold underline" href="https://react-google-maps-api-docs.netlify.app/">@react-google-maps/api</a>. Create .env.local file and add your google api key to get started.</h1>
-        <MapArea className="mb-4"
-          setCoordinates={setCoordinates}
-          coordinates={coordinates}
-        ></MapArea>
-        {/* <GooglePlacesAutocomplete
-          className="w-full rounded border px-2"
-          apiKey={process.env.NEXT_PUBLIC_GOOGLE_MAP_API_KEY}
-        /> */}
-        {/* <Autocomplete
-          className="rounded border my-20 px-2"
-          apiKey={process.env.NEXT_PUBLIC_GOOGLE_MAP_API_KEY}
-          onPlaceSelected={(place) => {
-            console.log(place);
-          }} 
-        />*/}
+      <main className="w-100 h-100">
+        <Mapper></Mapper>
       </main>
-
-      <footer className={styles.footer}>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Created by Waqas Khalid Obeidy{" "}
-          <span className={styles.logo}>
-            <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
-          </span>
-        </a>
-      </footer>
     </div>
   );
 }

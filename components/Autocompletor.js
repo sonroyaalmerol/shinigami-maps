@@ -13,7 +13,6 @@ function Autocompletor() {
   const onLoad = (autoC) => setAutocomplete(autoC);
 
   const onPlaceChanged = () => {
-
     setPlace({
       address: autocomplete.getPlace().formatted_address,
       lat: autocomplete.getPlace().geometry.location.lat(),
