@@ -1,8 +1,8 @@
 import Head from "next/head";
 import Image from "next/image";
 import { useState } from "react";
-import Mapper from "../components/Mapper";
 import styles from "../styles/Home.module.css";
+import Map from "../components/Map";
 
 
 export default function Home() {
@@ -20,7 +20,7 @@ export default function Home() {
       </Head>
 
       <main className="w-100 h-100">
-        <Mapper></Mapper>
+        <Map></Map>
       </main>
     </div>
   );
