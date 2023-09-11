@@ -105,7 +105,6 @@ function MyComponent() {
                 onLoad={onTargetLoad}
                 onUnmount={onTargetUnmount}
                 position={targetPosition}
-                draggable
             />
 
             {/* Person Marker */}
